@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Client {
 
     private OkHttpClient httpClient;
-    private String baseUrl="http://ip-172-31-82-68.ec2.internal:";
+    private String baseUrl="http://192.168.99.100:";
     private String[] ports={"8085","8086","8087"};
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private int serverNumber=0;
