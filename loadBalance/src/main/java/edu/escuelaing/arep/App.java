@@ -2,9 +2,11 @@ package edu.escuelaing.arep;
 
 import static spark.Spark.*;
 
+/**
+ * Load balancer app
+ */
 public class App 
 {
-
 
     public static void main( String[] args )
     {

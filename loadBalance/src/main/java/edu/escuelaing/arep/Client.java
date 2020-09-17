@@ -18,6 +18,12 @@ public class Client {
     }
 
 
+    /**
+     *
+     * @param path The corresponding path to which the method would be carried out
+     * @return the response of the method
+     * @throws IOException
+     */
     public String getMessages(String path) throws IOException {
         Request request = new Request.Builder()
                 .url(baseUrl+ports[serverNumber]+path)
@@ -27,6 +33,13 @@ public class Client {
         return response.body().string();
     }
 
+    /**
+     *
+     * @param message The message to apply to the post method
+     * @param path The corresponding path to which the method would be carried out
+     * @return the response of the method
+     * @throws IOException
+     */
     public String postMessage( String message,String path) throws IOException {
         RequestBody body = RequestBody.create(message,JSON);
         Request request = new Request.Builder()
@@ -36,6 +49,10 @@ public class Client {
         Response response = httpClient.newCall(request).execute();
         return response.body().string();
     }
+
+    /**
+     * Logic of round robin load balancer
+     */
     public void roundRobin(){
         this.serverNumber= (this.serverNumber+1)% ports.length;
     }

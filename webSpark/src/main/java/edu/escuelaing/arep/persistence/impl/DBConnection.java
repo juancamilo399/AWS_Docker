@@ -11,7 +11,9 @@ import org.bson.Document;
 import java.util.ArrayList;
 
 
-
+/**
+ * Class responsible for message persistence using a MongoDB database
+ */
 public class DBConnection implements MessagePersistence {
     public MongoClientURI uri;
     public MongoClient mongoClient;
@@ -22,7 +24,10 @@ public class DBConnection implements MessagePersistence {
         mongoClient = new MongoClient(uri);
     }
 
-
+    /**
+     * Save a message
+     * @param mensaje message to be saved
+     */
     @Override
     public void writeMessage(Mensaje mensaje) {
         MongoDatabase database = mongoClient.getDatabase("Arep");
@@ -33,6 +38,10 @@ public class DBConnection implements MessagePersistence {
     }
 
 
+    /**
+     * Load all messages
+     * @return the list of messages
+     */
     @Override
     public ArrayList<Mensaje> loadMessages() {
         ArrayList<Mensaje> mensajes=new ArrayList<>();

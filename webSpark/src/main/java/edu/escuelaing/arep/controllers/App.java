@@ -4,9 +4,17 @@ import com.google.gson.Gson;
 import edu.escuelaing.arep.services.MessageService;
 import static spark.Spark.*;
 
+/**
+ * Web spark app
+ */
 public class App 
 {
 
+    /**
+     * Initialize the spark application by publishing a get method used to read all messages
+     * and a post method to publish a message
+     * @param args
+     */
     public static void main( String[] args )
     {
         MessageService messageService= new MessageService();
@@ -24,6 +32,11 @@ public class App
         });
 
     }
+
+    /**
+     * return the port to be used
+     * @return the port to be used
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));

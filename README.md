@@ -1,4 +1,4 @@
-# AWS
+# Docker Aws workshop
 
 ### Prerequisites
 
