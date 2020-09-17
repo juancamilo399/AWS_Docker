@@ -1,5 +1,8 @@
 # Docker Aws workshop
 
+In this workshop a system capable of publishing messages will be built. This system is composed of a load balancer component, 3 web logic components and a MongoDB database component, each of which is modularized into Docker containers.
+
+
 ### Prerequisites
 
 * [Docker](https://www.docker.com/) - Container Manager
@@ -48,6 +51,11 @@ Content of the database.
 
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Spark](http://sparkjava.com/) - Micro framework for creating web applications in Java 8
+
+
+## Inform
+
+The architecture document can be found [here](arep5.pdf)
 
 
 ## Author
