@@ -1,0 +1,5 @@
+edu.escuelaing.arep.controllers
+edu.escuelaing.arep.model
+edu.escuelaing.arep.persistence
+edu.escuelaing.arep.persistence.impl
+edu.escuelaing.arep.services
